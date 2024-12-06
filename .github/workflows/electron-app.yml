@@ -54,7 +54,7 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           artifacts: "dist/**/*"
-          token: ${{ secrets.GH_TOKEN }}  # Using the default GITHUB_TOKEN
+          token: ${{ secrets.GITHUB_TOKEN }}  # Using the default GITHUB_TOKEN
           tag: ${{ github.ref_name }}
           name: "Release ${{ github.ref_name }}"  # Use 'name' instead of 'releaseName'
           body: "Automated release"
