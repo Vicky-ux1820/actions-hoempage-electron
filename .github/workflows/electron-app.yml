@@ -37,6 +37,8 @@ jobs:
         run: npm install electron
 
       - name: Build Electron App for ${{ matrix.os }}
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: npm run dist
 
   release:
