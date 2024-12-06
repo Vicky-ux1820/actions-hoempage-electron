@@ -41,22 +41,22 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: npm run dist
 
-  release:
-    runs-on: ubuntu-latest
-    needs: build
-    if: github.event_name == 'push'
+ release:
+  runs-on: ubuntu-latest
+  needs: build
+  if: github.event_name == 'push'
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-      - name: Upload Artifacts to GitHub Releases
-        uses: ncipollo/release-action@v1
-        with:
-          artifacts: "dist/**/*"
-          token: ${{ secrets.GITHUB_TOKEN }}  
-          tag: ${{ github.ref_name }}
-          releaseName: "Release ${{ github.ref_name }}"
-          body: "Automated release"
-          draft: false
-          prerelease: false
+    - name: Upload Artifacts to GitHub Releases
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: "dist/**/*"
+        token: ${{ secrets.GH_TOKEN }}  # Using the default GITHUB_TOKEN
+        tag: ${{ github.ref_name }}
+        name: "Release ${{ github.ref_name }}"  # Use 'name' instead of 'releaseName'
+        body: "Automated release"
+        draft: false
+        prerelease: false
