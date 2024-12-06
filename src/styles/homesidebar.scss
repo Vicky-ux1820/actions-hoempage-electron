@@ -1,0 +1,191 @@
+
+
+.homepage-navigation-sidebar-container{
+  overflow-y: hidden;
+width: 296px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.homepage-navigation-sidebar-navigation-container{
+ height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.homepage-navigation-sidebar-navigation-container-top{
+  display: flex;
+  flex-direction: column;
+   padding-top: 24px;
+   gap: 16px;
+}
+.homepage-navigation-sidebar-navigation-container-bottom{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 24px;
+}
+.homepage-navigation-sidebar-navigation-header-container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 4px;
+}
+.homepage-navigation-sidebar-link-item {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.homepage-navigation-sidebar-link-item:hover {
+    background-color: #f0f0f0;
+}
+
+.homepage-navigation-sidebar-link-item.active {
+    background-color: #e6f3ff;
+    /* Optional: add a left border indicator */
+    /* border-left: 4px solid #007bff; */
+}
+
+.homepage-navigation-sidebar-navigation-container{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 16px;
+}
+.homepage-navigation-sidebar-navigation-header-text{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 800;
+    color: #000000;
+}
+
+/* header-search */
+.primary-search-action {
+    display: flex;
+    padding: 8px 12px;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid #d5d7da;
+    border-radius: 8px;
+
+    .primary-input-dropdown {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      .primary-input-search-content {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        border-radius: 8px;
+
+        position: relative; /* Needed for label positioning */
+
+        .primary-search-image {
+          width: 20px;
+          height: 20px;
+        }
+
+        .primary-search-input-box {
+          width: 100%;
+          border: none;
+          background: transparent;
+          font-size: 16px;
+          line-height: 24px;
+          padding: 0;
+          outline: none;
+          color: #000;
+
+          &::placeholder {
+            color: transparent; /* Hides placeholder on focus */
+          }
+
+          &:focus {
+            outline: none;
+          }
+
+          &:focus + .primary-search-label,
+          &:not(:placeholder-shown) + .primary-search-label {
+            opacity: 0;
+          }
+        }
+
+        .primary-search-label {
+          position: absolute;
+          top: 50%;
+          left: 15%; /* Adjust if needed based on image size */
+          transform: translateY(-50%);
+          font-size: 16px;
+          color: #717680;
+          transition: all 0.3s ease;
+          pointer-events: none;
+        }
+      }
+
+      .primary-shortcut-key {
+        border: 1px solid #d5d7da;
+        border-radius: 4px;
+        padding: 1px 4px;
+      }
+    }
+  }
+.homepage-navigation-sidebar-navigation-links-container{
+    display: flex;
+    flex-direction: column;
+}
+.homepage-navigation-sidebar-link-item{
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+.homepage-navigation-sidebar-link-item-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.homepage-navigation-sidebar-link-base-icon{
+    padding-right: 2px;
+    padding-top: 2px;
+}
+
+.homepage-navigation-sidebar-link-base-text{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #414651;
+}
+
+.homepage-navigation-sidebar-account-card-container{
+    display: flex;
+    padding: 12px 12px;
+    border: 1px solid #E9EAEB;
+    border-radius: 12px;
+}
+.homepage-navigation-sidebar-account-card-wrapper{
+  width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.homepage-navigation-sidebar-account-card-text-and-user-icon-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.homepage-navigation-sidebar-account-card-text{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #181D27;
+}
+.homepage-navigation-sidebar-account-card-supporting-text{
+    font-size: 14px;
+    line-height: 20px;
+    color: #535862;
+}
+.homepage-navigation-sidebar-account-card-action{
+    border-radius: 6px;
+}
+

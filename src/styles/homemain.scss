@@ -1,0 +1,380 @@
+
+.home-page-main-container{  
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow-y: scroll;
+    padding-bottom: 48px;
+    gap: 24px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #FAFAFA;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+}
+.home-page-main-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Webkit browsers */
+}
+.home-page-main-header-section{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #FAFAFA;
+    z-index: 5;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background: rgba(255, 255, 255, 0.3); /* Transparent white */
+    backdrop-filter: blur(12px);           /* Glass blur effect */
+    -webkit-backdrop-filter: blur(12px);   /* Safari support */
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.home-page-main-header-section-wrapper{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    row-gap: 20px;
+    padding: 0px 32px;
+}
+.home-page-main-header-section-heading-and-actions{   width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.home-page-main-header-section-heading{
+     font-size: 24px;
+     line-height: 32px;
+     font-weight: 600;
+     color: #181D27;
+}
+.home-page-main-header-section-subheading{
+    font-size: 16px;
+    line-height: 24px;
+    color: #535862;
+}
+
+
+.home-page-main-header-section-actions-grp{
+    display: flex;
+}
+
+.home-page-main-header-section-actions-grp{
+    display: flex;
+    gap: 12px;
+    height: fit-content;
+}
+
+.button-component{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px;
+    gap: 4px;
+    border-radius: 8px;
+    background-color: #FFFF;
+    border: 1px solid #D5D7DA;
+    font-size: 14px;
+    font-weight: 600;
+    color: #414651;
+    cursor: pointer;
+    line-height: 20px;
+  }
+  .button-component:hover{
+    background-color: #FAFAFA;
+  }
+  .button-component.primary{
+    background-color: #1570EF;
+    color: #FFFF;
+  }
+
+
+.home-page-main-header-section-tabs-and-filters{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 24px;
+    justify-content: space-between;
+}
+
+
+.button-base-add{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+  .home-page-main-header-section-tabs-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 4px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #414651;
+    font-weight: 600;
+    border-right: 1px solid #D5D7DA;
+    background-color: #FFFF;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.home-page-main-header-section-tabs-button:nth-child(1){
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+ 
+}
+
+.home-page-main-header-section-tabs-button-grp {
+  display: flex;
+  border-radius: 8px;
+  border: 1px solid #D5D7DA;
+}
+
+
+.home-page-main-header-section-tabs-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 4px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #414651;
+  font-weight: 600;
+  border-right: 1px solid #D5D7DA;
+  background-color: #FFFF;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.home-page-main-header-section-tabs-button:hover {
+  background-color: #F0F3F4;
+  color: #2C3E50;
+}
+
+.home-page-main-header-section-tabs-button.active {
+  background-color: #E3E8ED;
+  color: #1A202C;
+}
+
+.home-page-main-header-section-tabs-button .active-tab-indicator-icon {
+  margin-right: 8px;
+}
+
+.home-page-main-header-section-tabs-button .new-tag-input {
+  border: none;
+  outline: none;
+  background-color: #FFF;
+  font-size: 14px;
+  color: #414651;
+  padding: 4px 8px;
+  width: 120px;
+  margin-right: 10px;
+  border-radius: 8px;
+  border: 1px solid #D5D7DA;
+}
+
+.home-page-main-header-section-tabs-button .add-tag-button {
+  cursor: pointer;
+  background-color: #F1F3F5;
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-page-main-header-section-tabs-button .add-tag-button img {
+  width: 16px;
+  height: 16px;
+}
+
+.home-page-main-header-section-tabs-button.button-base-add {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.home-page-main-header-section-tabs-button.button-base-add:hover {
+  background-color: #D4D8DC;
+}
+
+.home-page-main-header-section-tabs-button.button-base-add input {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #D5D7DA;
+  border-radius: 8px;
+}
+
+.home-page-main-header-section-tabs-button-add-icon {
+  width: 16px;
+  height: 16px;
+}
+
+
+.home-page-main-header-section-filter-grp{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.home-page-main-header-section-tabs-button .active-tab-indicator-icon {
+    display: none; /* Hide the dot by default */
+}
+
+.home-page-main-header-section-tabs-button.active {
+    background-color: #FAFAFA; /* Example active state background color */
+}
+
+.home-page-main-header-section-tabs-button.active .active-tab-indicator-icon {
+    display: flex; /* Show the dot for the active tab */
+}
+.home-page-main-container-posts-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-page-main-container-posts-section-wrapper{
+    width: 100%;
+    padding: 0px 32px;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    row-gap: 24px;
+    padding-bottom: 48px;
+}
+
+  
+  .home-page-main-header-section-tabs-button-add input {
+    border: none;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 3px;
+  }
+  
+  .home-page-main-header-section-tabs-button-add button {
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  .home-page-main-header-section-tabs-button-add button:hover {
+    background-color: #0056b3;
+  }
+  
+
+  .scroll-navigator {
+    position: fixed;
+    bottom: 45px;
+    left: 58%;
+    transform: translateX(-50%);
+    z-index: 100;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none; /* Prevents blocking other interactions */
+}
+
+.scroll-navigator-btn, .scroll-to-top-btn {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 12px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+.scroll-navigator-btn{
+  rotate: 180deg;
+}
+
+.scroll-navigator-btn img, .scroll-to-top-btn img {
+    width: 32px;
+    height: 32px;
+    
+}
+
+.scroll-navigator-btn:hover, .scroll-to-top-btn:hover {
+    transform: scale(1.1);
+}
+
+.scroll-navigator-btn.active, .scroll-to-top-btn.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-navigator {
+    position: fixed;
+    bottom: 30px;
+    left: 57%;
+    transform: translateX(-50%);
+    z-index: 100;
+  }
+  
+  .scroll-btn {
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .scroll-btn img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .scroll-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(145deg, #e6f3ff, #d4e6f7);
+  }
+  
+  .scroll-btn.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .scroll-down-btn {
+    animation: bounce 1.5s infinite ease-in-out;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+  

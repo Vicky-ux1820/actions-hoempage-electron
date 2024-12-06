@@ -1,0 +1,413 @@
+@import url(./ContentVariable.scss);
+
+.presettingmain{
+  position: fixed;
+  height: calc(100% - 82px);
+  margin-left: 80px;
+  transition: all 0.5s ease-in-out;
+  z-index: 0;
+  opacity: 0;
+  width: calc(100% - 320px);
+  &.open{
+    display: flex;
+    margin-left: 320px;
+    opacity: 1;
+    z-index: 1000;
+  }
+}
+.setting-page-container{
+    width: 100%;
+    display: flex;
+}
+
+
+
+.settings-navigation-sidebar-link-item.active {
+  background-color: #e0e0e0; /* Or any color to highlight the active link */ 
+}
+.settings-navigation-sidebar-link-item:hover{
+  background-color: #FAFAFA;
+  cursor: pointer;
+}
+
+.setting-page-main-container{
+    flex-grow: 1;
+    overflow-y: scroll;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 32px;
+    gap: 32px;
+    padding-bottom: 64px;
+    background-color: #FAFAFA;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+}
+.setting-page-main-header-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 32px;
+}
+.setting-page-main-header-section-wrapper{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    row-gap: 20px;
+}
+.setting-page-main-header-section-heading{
+     width: 50%;
+     font-size: 24px;
+     line-height: 32px;
+     font-weight: 600;
+     color: #181D27;
+     align-self: flex-start;
+}
+
+.setting-page-main-header-section-search{
+    display: flex;
+}
+
+.setting-page-search-action {
+    display: flex;
+    padding: 8px 12px;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid #d5d7da;
+    border-radius: 8px;
+    background-color: #FFFF;
+
+    .setting-page-input-dropdown {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      .setting-page-input-search-content {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+  
+        border-radius: 8px;
+        
+        position: relative; /* Needed for label positioning */
+      
+        .setting-page-search-image {
+          width: 20px;
+          height: 20px;
+        }
+      
+        .setting-page-search-input-box {
+          width: 100%;
+          border: none;
+          background: transparent;
+          font-size: 16px;
+          line-height: 24px;
+          padding: 0;
+          outline: none;
+          color: #000;
+      
+          &::placeholder {
+            color: transparent; /* Hides placeholder on focus */
+          }
+      
+          &:focus {
+            outline: none;
+          }
+      
+          &:focus + .setting-page-search-label,
+          &:not(:placeholder-shown) + .setting-page-search-label {
+            opacity: 0;
+          }
+        }
+      
+        .setting-page-search-label {
+          position: absolute;
+          top: 50%;
+          left: 10%; /* Adjust if needed based on image size */
+          transform: translateY(-50%);
+          font-size: 16px;
+          color: #717680;
+          transition: all 0.3s ease;
+          pointer-events: none;
+        }
+      }
+      
+      .setting-page-shortcut-key {
+        border: 1px solid #d5d7da;
+        border-radius: 4px;
+        padding: 1px 4px;
+      }
+    }
+  }
+
+
+
+
+//   secondary-container :
+.setting-page-main-secondary-container{
+    width: 100%;
+    padding: 0px 32px;
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+}
+
+.setting-page-main-secondary-container-header-wrapper{
+    width: 100%;
+    display: flex;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #E9EAEB;
+}
+.setting-page-main-secondary-container-header-texts{
+    width: 100%;
+}
+.setting-page-main-secondary-container-heading{
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 600;
+    color: #181D27;
+}
+.setting-page-main-secondary-container-subheading{
+    font-size: 14px;
+    line-height: 20px;
+    color: #535862;
+}
+
+.setting-page-main-secondary-container-checkbox-content-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 24px;
+}
+.setting-page-main-secondary-container-checkbox-item{  
+    display: flex;
+    padding: 16px 16px;
+    border-radius: 12px;
+    border: 2px solid #E9EAEB;
+    background-color: #FFFF;
+}
+.setting-page-main-secondary-container-checkbox-grp{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.setting-page-main-secondary-container-checkbox-item-wrapper{
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: flex-start;
+}
+.setting-page-main-secondary-container-checkbox-icon{
+    padding: 8px;
+    background-color: #FFFFFF;
+    border: 1px solid #E9EAEB;
+    border-radius: 6px;
+    height: 32px;
+}
+.setting-page-main-secondary-container-checkbox-icon img{
+    object-position: center;
+}
+.setting-page-main-secondary-container-checkbox-content-text-cont{
+    max-width: 280px;
+    min-width: 200px;
+}
+.setting-page-main-secondary-container-checkbox-content-text{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #414651;
+}
+.setting-page-main-secondary-container-checkbox-content-supporting-text{
+    font-size: 14px;
+    line-height: 20px;
+    color: #535862;
+}
+
+.setting-page-main-secondary-container-checkbox-head-text{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #414651;
+}
+.checkbox-span-text{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #414651;
+}
+.setting-page-main-secondary-container-checkbox-supporting-text{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #414651;
+}
+
+
+/* Style the selected checkbox with circular radio button effect */
+.setting-page-main-secondary-container-checkbox-item.selected {
+    border-color: #2e90fa !important; /* Change border to blue when selected */
+    background-color: #f3faff; /* Light blue background when selected */
+  }
+
+  
+  /* Style for the inner radio circle */
+  .radio-button {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%; /* Circular inner circle */
+    background-color: white; /* Default white background */
+    border: 2px solid #2e90fa; /* Border color when not selected */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  /* When the plan is selected, fill the circle and change border */
+  .setting-page-main-secondary-container-checkbox-item.selected .radio-button {
+    background-color: #2e90fa; /* Filled circle when selected */
+    border-color: #2e90fa; /* Match border color with the filled circle */
+  }
+  
+  /* Optional: Hover effect on checkbox */
+  .setting-page-main-secondary-container-checkbox-item:hover {
+    border-color: #1f72d4; /* Slightly darker border on hover */
+  }
+  
+  /* Optional: When hovering the radio button, give it a slight grow effect */
+  .setting-page-main-secondary-container-checkbox-base:hover .radio-button {
+    transform: scale(1.1); /* Slightly enlarge the radio button on hover */
+  }
+  
+  .usage-cont-settings{
+    display: flex;
+    width: 12%;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffff;
+    padding: 4px 14px;
+    gap: 4px;
+    border-radius: 8px;
+    border: 1px solid #D0D5DD;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px
+  }
+
+
+
+  // table-container
+  .desktop-subscribe-card-table-container {
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid #E9EAEB;
+    background-color: #FFFFFF;
+   border-radius: 12px;
+  }
+  
+  #sidebar-table {
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+ 
+  }
+  
+  .sidebar-table-th {
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    width: 100%;
+    padding: 12px 24px;
+    display: flex;
+    gap: 6px;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #ffff;
+    border-bottom: 1px solid #E9EAEB;
+    color: #717680;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 600;
+  }
+  .sidebar-table-th:nth-child(1){
+    width: 120%;
+  }
+  .sidebar-table-head-text{
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    align-items: center;
+  }
+
+/* Ensure the icon in the Date column aligns correctly */
+.sidebar-table-td {
+  width: 100%;
+  border-bottom: 1px solid #E9EAEB;
+  font-size: 14px;
+  line-height: 20px;
+  color: #535862;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 16px 24px;
+  background-color: #ffff;
+  position: relative; /* For positioning the icon inside the cell */
+}
+
+.sidebar-table-td:nth-child(1){
+  width: 120%;
+}
+
+/* Add styling for the icon in the Date column */
+.invoice-column-icon {
+  width: 16px;  /* Adjust icon size */
+  height: 16px;
+  margin-right: 8px;  /* Space between the icon and the text */
+  vertical-align: middle;  /* Vertically align the icon with the text */
+  flex-shrink: 0; /* Prevent the icon from shrinking */
+}
+
+  
+  /* Styling for the second column of the table */
+  #sidebar-table:nth-child(2) .sidebar-table-td {
+    background-color: #FFFFFF;
+  }
+  
+  /* Ensure proper row structure */
+  .sidebar-table-tr {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Distribute the two columns evenly */
+    align-items: center;
+  }
+
+  .sidebar-table-tbody {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar-table-head {
+    display: flex;
+    width: 100%;
+  }
+  
+  /* Target the last row (tr) of the table */
+#sidebar-table tbody tr:last-child {
+  /* Apply a border radius to the last row */
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  overflow: hidden; /* To ensure the content doesn't overflow the border radius */
+}
+
+/* Ensure the last td in the last row has a rounded corner */
+#sidebar-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 12px;
+}
+
+/* Ensure the first td in the last row has a rounded corner */
+#sidebar-table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 12px;
+}

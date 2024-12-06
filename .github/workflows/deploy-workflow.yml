@@ -1,0 +1,25 @@
+name: Reusable Deploy Workflow
+
+on:
+  workflow_call:
+    inputs:
+      tag:
+        description: "Tag for the release"
+        required: true
+        type: string
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Deploy logic here (e.g., GitHub Releases)
+      - name: Deploy Electron App
+        uses: ncipollo/release-action@v1
+        
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          artifacts: dist/*.*
+          tag: ${{ inputs.tag }}
+          name: Release ${{ inputs.tag }}
+          draft: false

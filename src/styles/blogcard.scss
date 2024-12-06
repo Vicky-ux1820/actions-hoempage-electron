@@ -1,0 +1,143 @@
+
+.resources-post-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-self: flex-start;
+    gap: 24px;
+     gap: 48px 32px;
+}
+    .resources-blog-post-card {
+      width: 420px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      height: max-content;
+    }
+
+    @keyframes fadeInSlideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly below the final position */
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0); /* End at the final position */
+      }
+    }
+
+    .animate-card {
+      animation: fadeInSlideUp 0.8s ease-in-out;
+      opacity: 1;
+    }
+
+      .resources-blog-image {
+        background-color: #C4C4C5;
+        border-radius: 16px;
+        height: 240px;
+        width: 100%;
+      }
+      .resources-blog-image img {
+        width: 100%;
+      }
+      .resource-blog-card-content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+        .resource-heading-and-subheading {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+          .resource-badge-group {
+             width: 100%;
+             font-size: 14px;
+             line-height: 20px;
+             color: #175CD3;
+             font-weight: 600;
+          }
+          
+          .resources-heading-text {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+          }
+            .resources-heading-and-icon {
+              display: flex;
+              justify-content: space-between;
+              gap: 16px;
+            }
+              .resources-blog-heading {
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 28px;
+                letter-spacing: 0%;
+                text-align: left;
+                color: #181d27;
+              }
+              .blog-up-right-arrow {
+                display: flex;
+                flex-direction: column;
+                padding-top: 4px;
+                width: 24px;
+                height: 24px;
+              }
+        
+            .resources-supporting-text {
+              font-size: 16px;
+              line-height: 24px;
+              text-align: left;
+              color: #535862;
+            }
+            .desktop-page-hero-section-header-subheading-badge-grp{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 8px;
+            }
+            .desktop-page-hero-section-header-subheading-badge-type{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 4px;
+                padding: 2px 8px;
+                border-radius: 6px;
+                border: 1px solid #D5D7DA;
+                background-color: #FFFFFF;
+            }
+           
+            .desktop-page-hero-section-header-subheading-badge-inner-icon{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        
+            .desktop-page-hero-section-header-subheading-badge-item{
+                font-size: 14px;
+                line-height: 20px;
+                color: #414651;
+                font-weight: 550;
+            }
+
+            .resource-tags-group {
+                display: flex;
+                gap: 8px;
+        
+              }
+              
+              .desktop-page-hero-section-header-subheading-badge-type {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+              }
+              
+              .desktop-page-hero-section-header-subheading-badge-inner-icon {
+                width: 12px;
+                height: 12px;
+              }
+              
+              .desktop-page-hero-section-header-subheading-badge-text {
+                font-size: 14px;
+              }
+              
