@@ -2,7 +2,7 @@
   "name": "7_electron_hello",
   "version": "1.0.0",
   "description": "Your app description here",
-  "main": "./public/electron.js",
+  "main": "./public/App.js",
   "homepage": "./",
   "scripts": {
     "start": "react-scripts start",
@@ -43,8 +43,9 @@
     "appId": "com.electron.reactapp",
     "productName": "Electron React App",
     "files": [
-      "build/**/*",
+      "dist/**/*",
       "electron.js",
+      "src/preload.js",
       "package.json",
       "renderer.js",
       ".eigenspace/**/*"
