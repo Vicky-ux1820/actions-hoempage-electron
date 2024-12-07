@@ -129,5 +129,7 @@ mainWindow.loadURL(startURL);
 - The `.project-eigenspace` file ensures the app operates as an Eigenspace project.
 
 ---
+git push origin refs/heads/main
+
 
 Happy coding! Let me know if you need further assistance or customizations.
