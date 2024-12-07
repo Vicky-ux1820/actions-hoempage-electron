@@ -55,8 +55,8 @@ jobs:
         with:
           artifacts: "dist/**/*"
           token: ${{ secrets.GITHUB_TOKEN }}  # Using the default GITHUB_TOKEN
-          tag: v1.1.0-${{ github.ref_name }}
-          name: "Release v1.1.0-${{ github.ref_name }}"  # Use 'name' instead of 'releaseName'
+          tag: v1.1.1-${{ github.ref_name }}
+          name: "Release v1.1.1-${{ github.ref_name }}"  # Use 'name' instead of 'releaseName'
           body: "Automated release"
           draft: false
           prerelease: false
