@@ -23,9 +23,10 @@ function createWindow() {
   // Load the HTML file
   // mainWindow.loadFile(path.join(__dirname, 'index.html'));
   const startURL =
-    process.env.NODE_ENV === "production"
-      ? path.join("file://", __dirname, "build", "index.html")
-      : "http://localhost:3000";
+  process.env.NODE_ENV === "production"
+    ? `file://${path.join(__dirname, "../dist/index.html")}` // Path to `index.html` in `dist`
+    : "http://localhost:3000"; // Development server
+
 
   mainWindow.loadURL(startURL);
   // Handle opened files (macOS/Windows)

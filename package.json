@@ -2,7 +2,7 @@
   "name": "7_electron_hello",
   "version": "1.0.0",
   "description": "Your app description here",
-  "main": "./public/App.js",
+  "main": "./app/main/main.js",
   "homepage": "./",
   "scripts": {
     "start": "react-scripts start",
